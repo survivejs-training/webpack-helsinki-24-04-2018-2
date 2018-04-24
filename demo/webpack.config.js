@@ -7,20 +7,24 @@ const commonConfig = merge([
   {
     plugins: [
       new HtmlWebpackPlugin({
-        title: "Webpack demo"
-      })
-    ]
-  }
+        title: "Webpack demo",
+      }),
+    ],
+  },
 ]);
 
-const productionConfig = merge([]);
+const productionConfig = merge([
+  {
+    devtool: "source-map",
+  },
+]);
 
 const developmentConfig = merge([
   parts.devServer({
     // Customize host/port here if needed
     host: process.env.HOST,
-    port: process.env.PORT
-  })
+    port: process.env.PORT,
+  }),
 ]);
 
 module.exports = mode => {
