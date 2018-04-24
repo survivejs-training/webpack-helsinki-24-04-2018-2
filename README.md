@@ -16,6 +16,7 @@
 * General ideas of module bundling.
 * Webpack vs. other tools.
 * Optimizing output, bundle splitting. SSR.
+* Migration (webpack 1 to 4).
 
 ## Examples
 
