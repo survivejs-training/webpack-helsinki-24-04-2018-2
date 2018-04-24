@@ -48,3 +48,14 @@ import foo from "foo";
 ```
 
 `components/Header/Header.jsx` -> `import Header from './components/Header'`
+
+## Loader Order
+
+```javascript
+use: ["style-loader", "css-loader"]
+```
+
+```javascript
+styleLoader(cssLoader(input))
+```
+
