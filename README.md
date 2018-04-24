@@ -12,4 +12,38 @@
 
 ## Goals
 
+* Understanding webpack in more detail.
+* General ideas of module bundling.
+* Webpack vs. other tools.
+* Optimizing output, bundle splitting. SSR.
 
+## Examples
+
+```javascript
+const path = require("path");
+
+const config = {
+  resolve: {
+    alias: {
+      /*...*/
+      foo: path.join(__dirname, "bar/foo.js"),
+    },
+    extensions: [
+      /*...*/
+      ".jsx",
+      ".js",
+      ".json"
+    ],
+    modules: [
+      path.join(__dirname, "my_modules"),
+      path.join(__dirname, "node_modules"),
+    ],
+  },
+};
+```
+
+```javascript
+import foo from "foo";
+```
+
+`components/Header/Header.jsx` -> `import Header from './components/Header'`
