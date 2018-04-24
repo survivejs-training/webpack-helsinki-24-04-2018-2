@@ -16,6 +16,18 @@ const commonConfig = merge([
 const productionConfig = merge([
   {
     devtool: "source-map",
+    optimization: {
+      splitChunks: {
+        chunks: "initial",
+      },
+      runtimeChunk: {
+        name: "manifest",
+      },
+    },
+    output: {
+      chunkFilename: "[name].[chunkhash].js",
+      filename: "[name].[chunkhash].js",
+    },
   },
   parts.extractCSS(),
   parts.loadImages({
